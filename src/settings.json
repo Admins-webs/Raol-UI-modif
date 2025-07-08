@@ -1,45 +1,114 @@
 {
-  "name": "Raol Api'S",
-  "version": "v1.0.0",
-  "description": "Simple and easy to use API.",
+  "name": "FreeApi",
+  "version": "1.0.1",
+  "description": "🔥 Powerful API collection for developers by VGX Team.",
+  "author": "End Team",
+  "repository": "",
+  "support": {
+    "contact": "https://wa.me/",
+    "docs": "https://.vercel.app",
+    "issues": "https://github"
+  },
+  "theme": {
+    "color": "#4f46e5",
+    "mode": "dark"
+  },
   "maintenance": {
     "enabled": false,
-    "gifUrl": "https://raw.githubusercontent.com/raolbyte/xyz/refs/heads/main/public/maintenance.gif"
+    "message": "🚧 We're currently upgrading some endpoints.",
+    "gifUrl": "https://raw.githubusercontent.com/raolbyte/xyz/main/public/maintenance.gif"
   },
-  "bannerImage": "/src/banner.jpg",
-  "previewImage": "/src/preview.png",
+  "images": {
+    "banner": "/src/banner.jpg",
+    "preview": "/src/preview.png"
+  },
   "header": {
-    "status": "Active!"
+    "status": "🟢 Online",
+    "lastUpdated": "2025-07-08",
+    "totalEndpoints": 5
   },
   "apiSettings": {
     "creator": "VGX Team",
-    "apikey": ["vgx-team"]
+    "apikey": ["vgx-team", "vgx-demo", "vgx-admin"]
   },
   "categories": [
     {
-      "name": "Artificial Intelligence",
+      "name": "🤖 Artificial Intelligence",
+      "icon": "brain-circuit",
       "items": [
         {
           "name": "LuminAI",
-          "desc": "Talk with luminai - Advanced AI assistant",
+          "desc": "Chat with LuminAI, a fast-response AI bot.",
           "path": "/ai/luminai?text=",
+          "method": "GET",
           "status": "ready",
+          "authRequired": true,
           "params": {
-            "text": "Text for luminai to respond to"
-          }
+            "text": "Text to send to LuminAI"
+          },
+          "example": "/ai/luminai?text=Hello",
+          "note": "Use this for AI chatbot integration."
         }
       ]
     },
     {
-      "name": "Random Images",
+      "name": "🖼️ Random Images",
+      "icon": "image",
       "items": [
         {
           "name": "Blue Archive",
-          "desc": "Get random Blue Archive character images",
+          "desc": "Random Blue Archive character image.",
           "path": "/random/ba",
-          "status": "ready"
+          "method": "GET",
+          "status": "ready",
+          "authRequired": false,
+          "example": "/random/ba"
+        },
+        {
+          "name": "Waifu Generator",
+          "desc": "Anime waifu random image generator.",
+          "path": "/random/waifu",
+          "method": "GET",
+          "status": "beta",
+          "authRequired": false,
+          "example": "/random/waifu"
+        }
+      ]
+    },
+    {
+      "name": "🧰 Text Tools",
+      "icon": "text-cursor-input",
+      "items": [
+        {
+          "name": "Base64 Encode",
+          "desc": "Encode text to Base64 format.",
+          "path": "/tools/base64?text=",
+          "method": "GET",
+          "status": "ready",
+          "authRequired": false,
+          "params": {
+            "text": "The text you want to encode"
+          },
+          "example": "/tools/base64?text=raolapi"
+        },
+        {
+          "name": "Reverse Text",
+          "desc": "Reverse any given text.",
+          "path": "/tools/reverse?text=",
+          "method": "GET",
+          "status": "ready",
+          "authRequired": false,
+          "params": {
+            "text": "The text to reverse"
+          },
+          "example": "/tools/reverse?text=hello"
         }
       ]
     }
-  ]
+  ],
+  "footer": {
+    "copyright": "© 2025 Raol API",
+    "poweredBy": "VGX Team",
+    "builtWith": ["Node.js", "Express", "MongoDB"]
+  }
 }
