@@ -1,23 +1,54 @@
 {
-  "name": "raol-apis",
+  "name": "athaapi",
   "version": "1.0.0",
-  "description": "Simple and easy to use API documentation website",
+  "description": "🔥 Simple and easy-to-use API documentation website built with Express",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "node --watch index.js"
+    "dev": "nodemon index.js",
+    "preview": "node index.js",
+    "format": "prettier --write ."
   },
-  "keywords": ["api", "documentation", "rest", "express", "nodejs"],
-  "author": "VGX Team",
+  "keywords": [
+    "api",
+    "documentation",
+    "rest",
+    "express",
+    "nodejs",
+    "athaapi",
+    "openapi",
+    "json",
+    "http"
+  ],
+  "author": "End Team",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2",
-    "cors": "^2.8.5",
+    "axios": "^1.6.0",
     "chalk": "^5.3.0",
-    "axios": "^1.6.0"
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "prettier": "^3.2.5"
   },
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/"
+  },
+  "homepage": "https://.vercel.app",
+  "files": [
+    "index.js",
+    "src/",
+    "api-page/",
+    "public/"
+  ],
+  "private": true
 }
